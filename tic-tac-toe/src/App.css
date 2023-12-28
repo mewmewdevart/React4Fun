@@ -1,9 +1,43 @@
+:root {
+  --background-color: rgb(32, 32, 32);
+  --text-color: rgb(230, 230, 230);
+  --button-border-color: black;
+  --button-hover-background: pink;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
+h1 {
+  margin-top: 5%;
+  line-height: 1em;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  font-size: 2.8em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.game-board {
+  margin-top: 5%;
+}
+
+.status {
+  margin: 5% 0;
+  font-size: 1.4em;
+  text-align: center;
+  font-weight: bold;
+}
 .board-row {
   display: flex;
   gap: 5px;
@@ -14,53 +48,49 @@ body {
   width: 100px;
   height: 100px;
   font-size: 5rem;
-  border: 2px solid black;
-  border-radius: 5px;
+  border: 4px solid rgb(230, 230, 230);
+  padding: 0;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .board-row button:hover {
   cursor: pointer;
-  background-color: pink;
+  background-color: rgb(74, 74, 74);
 }
 
-/*
 
-.App {
+h2 {
+  font-size: 1.2em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.game-info {
+  margin-top: 5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ol {
+  margin-top: 5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ol button {
+  margin-top: 2%;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  border: 2px solid rgb(230, 230, 230);
+  font-size: 1em;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
-.App-link {
-  color: #61dafb;
+ol button:hover {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  border: 2px solid var(--background-color);
+  font-size: 1em;
+  color: var(--background-color);
+  background-color: var(--text-color);
+  height: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/

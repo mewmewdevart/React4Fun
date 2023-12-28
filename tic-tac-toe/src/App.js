@@ -87,9 +87,9 @@ export default function Game() {
 	const moves = history.map((squares, move) => {
     let description;
     if (move > 0)
-      description = 'Go to move #' + move;
+      description = ' Go to move #' + move;
     else
-      description = 'Go to game start';
+      description = ' Go to game start';
 
     return (
       <li>
@@ -101,10 +101,15 @@ export default function Game() {
   // Render the overall game structure
   return (
     <div className="game">
+      <h1>Tic-Tac-Toe</h1>
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
+        <h2># Actions #</h2>
+        <p>Check game action history </p>
+        <p>Click to return to a previous action.</p>
+        <p>⚠️ | Caution: Avoid overwriting an action</p>
 				<ol>{moves}</ol>
       </div>
     </div>
